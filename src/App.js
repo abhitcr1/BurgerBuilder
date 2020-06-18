@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './components/Layout/Layout';
-
+import  BurgerBuilder from './contaiers/BurgerBuilder/BurgerBuilder';
 
 
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div >
        <Layout>
-         <p>Test</p>
+         <BurgerBuilder/>
        </Layout>
       </div>
     );
