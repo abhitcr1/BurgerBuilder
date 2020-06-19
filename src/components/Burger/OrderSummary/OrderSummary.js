@@ -17,7 +17,10 @@ const ordarSummary=(props)=>{
                 {ingredientSummary}
 
             </ul>
-<p>Continue to CheckOut</p>
+            <p>Continue to CheckOut</p>
+            <button>Cancel</button>
+            <button>Continue</button>
+                
         </Aux>
     );
 }
