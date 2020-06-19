@@ -18,6 +18,7 @@ const ordarSummary=(props)=>{
                 {ingredientSummary}
 
             </ul>
+            <p><strong>Total Price: {props.price}</strong></p>
             <p>Continue to CheckOut</p>
             <Button btnType="Danger" clicked={props.purchaseCancelled} >Cancel</Button> 
             <Button btnType="Success" clicked={props.purchaseContinued} >Continue</Button>
