@@ -4,4 +4,5 @@ How to use the downloaded files
 
 1) Run "npm install" in the extracted folder
 2) Run "npm start" to view the project
-if this doesnot work, feel free to email me at abhitcr1@gmail.com
+
+If this doesnot work, feel free to email me at abhitcr1@gmail.com
