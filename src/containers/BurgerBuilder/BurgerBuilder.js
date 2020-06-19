@@ -73,6 +73,9 @@ purchaseHandler=()=>{
 purchaseCancelHandler=()=>{
     this.setState({purchasing:false});
 }
+purchaseContinueHandler=()=>{
+    alert('continued');
+}
 
     render () {
         const disabledInfo={
@@ -84,7 +87,9 @@ purchaseCancelHandler=()=>{
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}> 
-                    <OrderSummary ingredients={this.state.ingredients} />
+                    <OrderSummary ingredients={this.state.ingredients} 
+                    purchaseCancelled={this.purchaseCancelHandler}
+                    purchaseContinued={this.purchaseContinueHandler}    />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
