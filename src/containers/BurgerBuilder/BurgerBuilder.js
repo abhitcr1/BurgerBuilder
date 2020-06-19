@@ -67,7 +67,7 @@ removeIngredientHandler=(type)=>{
     this.setState({totalPrice:newPrice,ingredients:updatedIngredients});
     this.updatePurchaseState(updatedIngredients);
 }
-purchaseHandler(){
+purchaseHandler=()=>{
     this.setState({purchasing:true});
 }
 
@@ -80,7 +80,7 @@ purchaseHandler(){
         }
         return (
             <Aux>
-                <Modal> 
+                <Modal show={this.state.purchasing}> 
                     <OrderSummary ingredients={this.state.ingredients} />
                 </Modal>
                 <Burger ingredients={this.state.ingredients} />
