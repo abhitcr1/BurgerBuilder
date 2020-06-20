@@ -1,4 +1,4 @@
-*This project is incomplete. I'm still working on it*
+*This project is incomplete. I'm still working on it. Backend/ServerSide is being integrated;*
 
 
 This is project inspired from cake making game in windows 7(dont remember the name of that game though xD)
