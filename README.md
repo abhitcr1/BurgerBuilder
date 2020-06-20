@@ -1,3 +1,6 @@
+*This project is incomplete. I'm still working on it*
+
+
 This is project inspired from cake making game in windows 7(dont remember the name of that game though xD)
 
 How to use the downloaded files
