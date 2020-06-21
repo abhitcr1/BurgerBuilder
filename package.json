@@ -90,4 +90,5 @@
   "eslintConfig": {
     "extends": "react-app"
   }
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
