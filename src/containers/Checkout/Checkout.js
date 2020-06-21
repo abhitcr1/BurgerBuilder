@@ -10,7 +10,7 @@ class Checkout extends Component{
             bacon:1
         }
     }
-    renfer(){
+    render(){
         return(
             <div>
                 <CheckoutSummary ingredients ={this.state.ingredients} />
