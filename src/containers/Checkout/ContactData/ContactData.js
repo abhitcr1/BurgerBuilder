@@ -1,7 +1,7 @@
 import React, {Component}  from 'react';
 import Button from '../../../components/UI/Button/Button';
 import classes from './ContactData.css';
-
+import axios from '../../../axios-orders';
 class ContactData extends Component{
 
     state:{
@@ -10,9 +10,37 @@ class ContactData extends Component{
         address:{
             street:"",
             postalCode:""
-        }
+        },
+        loading:false
 
   }
+
+  orderHandler=(event)=>{
+    event.preventDefault();
+      this.setState( { loading: true } );
+         const order = {
+             ingredients: this.props.ingredients,
+             price: this.props.price,
+           
+             customer: {
+                 name: 'Max Schwarzmüller',
+                 address: {
+                     street: 'Teststreet 1',
+                     zipCode: '41351',
+                     country: 'Germany'
+                 },
+                 email: 'test@test.com'
+             },
+             deliveryMethod: 'fastest'
+         }
+         axios.post( '/orders.json', order )
+             .then( response => {
+                 this.setState( { loading: false, purchasing: false } );
+             } )
+             .catch( error => {
+                 this.setState( { loading: false, purchasing: false } );
+             } );
+            }
 
 render(){
     return(
@@ -23,7 +51,7 @@ render(){
                 <input className={classes.Input} type="email" name="email" placeholder="Your email" />
                 <input className={classes.Input} type="text" name="street" placeholder="Your street" />
                 <input className={classes.Input} type="text" name="postal" placeholder="Your ZipCode" />
-                <Button btnType="Success">ORDER</Button>
+                <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
             </form>
         </div>
     );
