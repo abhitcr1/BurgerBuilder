@@ -9,3 +9,4 @@ How to use the downloaded files
 2) Run "npm start" to view the project
 
 If this doesnot work, feel free to email me at abhitcr1@gmail.com
+[![HitCount](http://hits.dwyl.com/abhitcr1/BurgerBuilder.svg)](http://hits.dwyl.com/abhitcr1/BurgerBuilder)
